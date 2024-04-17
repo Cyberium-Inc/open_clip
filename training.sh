@@ -1,0 +1,15 @@
+python -m training.main \
+    --save-frequency 1 \
+    --zeroshot-frequency 1 \
+    --report-to tensorboard \
+    --train-data="/home/prabhatkr/clip-sanskrit-data/annotations/jsonlinessanskrit-captions_train2017.csv"  \
+    --val-data="/home/prabhatkr/clip-sanskrit-data/annotations/jsonlinessanskrit-captions_val2017.csv"  \
+    --csv-img-key image_path \
+    --csv-caption-key captions \
+    --warmup 10000 \
+    --batch-size=128 \
+    --lr=1e-3 \
+    --wd=0.1 \
+    --epochs=30 \
+    --workers=8 \
+    --model RN50
